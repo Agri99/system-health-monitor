@@ -16,23 +16,27 @@ A simple Pyhton-based script that checks the system's health and logs key metric
 
 ## How to Run
 1. Clone the repository:
-'''Bash
+'''bash
+
 git clone
 https://github.com/Agri99/system-health-monitor.git
 cd system-health-monitor
 
-2. (Optional but recomended) Set up a virtual environment:
-'''Bash
+3. (Optional but recomended) Set up a virtual environment:
+'''bash
+
 python -m venv
 .\venv\Scripts\activate # On Windows
 Source /venv/Script/activate # On Linux
 
-3. Install Required Libraries:
-'''Bash
+4. Install Required Libraries:
+'''bash
+
 pip install -r requirenments.txt
 
-4. Run the script:
-'''Bash
+5. Run the script:
+'''bash
+
 pyhton monitor.py
 
 ---
