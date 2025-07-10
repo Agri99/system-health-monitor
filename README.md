@@ -3,6 +3,8 @@ A simple Pyhton-based script that checks the system's health and logs key metric
 - CPU usage
 - RAM usage
 - Disk usage
+- Internet Connectivity
+- Service Status
 
 ---
 
@@ -38,10 +40,15 @@ pyhton monitor.py
 ---
 
 # Sample Output
-=== 2025-07-09 05:26:24 ===
-CPU Usage: 2.9%
-RAM Usage: 40.7% (1330MB used of3921MB) 
-Disk Usage: 26.5% (19GB used of 78GB)
+=== 2025-07-09 23:06:34 ===
+CPU Usage: 1.3%
+RAM Usage: 41.3% (1343MB used of3921MB) 
+Disk Usage: 26.8% (19GB used of 78GB)
+
+Internet Connectivity: Online
+
+Service 'sshd':, Running
+
 
 ---
 
