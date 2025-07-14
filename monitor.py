@@ -1,6 +1,7 @@
 import psutil
 import datetime
 import socket
+import os
 from colorama import init, Fore, Style
 init(autoreset=True)
 
@@ -25,17 +26,32 @@ def check_service_running(service_name):
 
 #Logging System Status
 def log_system_status():
-    now = datetime.datetime.now()
-    log_file = "system-health.log"
+    now = datetime.datetime.now() 
 
+    # Create 'logs' directory if it doesn't exist
+    os.makedirs("logs", exist_ok=True)
+    
+    # Generate a log file name based on curent date
+    log_file = f"logs/system_health{now.strftime('%Y-%m-%d')}.log"
+
+
+    # Generate CPU percentage
     cpu = psutil.cpu_percent(interval=1)
     cpu_color = Fore.RED if cpu > 85 else (Fore.YELLOW if cpu > 65 else Fore.GREEN)
+
+    # Generate RAM percentage
     ram = psutil.virtual_memory()
     ram_color = Fore.RED if ram.percent > 90 else (Fore.Yellow if cpu > 70 else Fore.GREEN)
+
+    # Generate Disk Usage percentage
     disk = psutil.disk_usage('/')
     disk_color = Fore.RED if disk.percent > 90 else (Fore.Yellow if cpu > 70 else Fore.GREEN)
+
+    # Generate Internet connectivity
     internet = check_internet()
     internet_color = Fore.GREEN if internet else Fore.RED
+
+    # Generate Service Status
     service_name = "sshd" #Change to what you want to monitor
     service_status = check_service_running(service_name)
     service_color = Fore.GREEN if service_status else Fore.RED

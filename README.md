@@ -53,6 +53,11 @@ Internet Connectivity: Online
 
 Service 'sshd':, Running
 
+---
+
+## Version
+- v1.0 - Basic Script with CPU, RAM, Disk Logging
+- v1.1 - Added Internet check, Service Status check and Color-coded terminal output with 'colorama'
 
 ---
 
