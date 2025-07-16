@@ -21,6 +21,7 @@ A simple Pyhton-based script that checks the system's health and logs key metric
 '''bash
 
 >git clone https://github.com/Agri99/system-health-monitor.git
+
 >cd system-health-monitor
 
 3. (Optional but recomended) Set up a virtual environment:
@@ -46,8 +47,11 @@ A simple Pyhton-based script that checks the system's health and logs key metric
 
 # Sample Output
 === 2025-07-09 23:06:34 ===
+
 CPU Usage: 1.3%
+
 RAM Usage: 41.3% (1343MB used of3921MB) 
+
 Disk Usage: 26.8% (19GB used of 78GB)
 
 Internet Connectivity: Online
